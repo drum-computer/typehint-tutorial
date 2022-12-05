@@ -8,11 +8,11 @@ class playerextension:
     """
     def __init__(self, ownerComp: td.baseCOMP):
         # The component to which this extension is attached
-        self.ownerComp = ownerComp
+        self.ownerComp: td.baseCOMP = ownerComp
         self.playlistComp: playlistextension = self.ownerComp.op('../playlist')
 
-    def LoadPlaylist(self):
+    def LoadPlaylist(self) -> None:
         self.playlistComp.Load()
 
-    def PlayClip(self, index):
+    def PlayClip(self, index: int) -> None:
         self.playlistComp.Clips[index].play()

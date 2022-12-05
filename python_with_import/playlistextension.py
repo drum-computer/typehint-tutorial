@@ -2,7 +2,7 @@ import td
 
 
 class clip:
-	def play(self):
+	def play(self) -> None:
 		print("clip playback started")
 
 
